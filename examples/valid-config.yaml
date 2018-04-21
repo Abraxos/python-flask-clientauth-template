@@ -1,0 +1,16 @@
+server:
+  ca-cert: test-ca/server1/ca-cert.pem
+  cert: test-ca/server1/cert.pem
+  key: test-ca/server1/key.pem
+  port: 443
+  # hostname: localhost
+  # timeout: 30
+  # num-workers: 8 # defaults to number of cores on server
+webapp:
+  log-level: INFO
+database:
+  host: localhost
+  port: 5432
+  username: eugene
+  password: testpass
+  db-name: test-db # optional, should default to a db name associated with application
