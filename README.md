@@ -34,3 +34,31 @@ For configuration examples, see the `examples/valid-config.yaml` file, as well a
 ## Database
 
 Coming soon...
+
+## Testing
+
+Testing is done with `pytest`. Here are some useful commands:
+
+Run all tests
+
+```
+(python-flask-clientauth-template)$ pytest -s -vv python_flask_clientauth_template/test
+```
+
+Run all tests with coverage
+
+```
+(python-flask-clientauth-template)$ pytest -s -vv --cov-report=html --cov=python_flask_clientauth_template python_flask_clientauth_template/test
+```
+
+Run all the unit tests Right now all the tests are unit tests, but eventually there may be integration tests.
+
+```
+(python-flask-clientauth-template)$ pytest -s -vv --cov-report html --cov=python_flask_clientauth_template python_flask_clientauth_template/test/unit
+```
+
+Run a specific test
+
+```
+(python-flask-clientauth-template)$ pytest -s -vv --cov=python_flask_clientauth_template --cov-report=html python_flask_clientauth_template/test/test_client_cert_auth.py::test_client_auth_with_same_credentials
+```
